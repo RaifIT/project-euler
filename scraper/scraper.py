@@ -4,9 +4,10 @@ from bs4 import BeautifulSoup
 
 def run():
     markdown_dict = {}                                                          # Markdown Dictionary
-    problem_id = 3                                                              # Problem number
-    scrape(markdown_dict, problem_id)                                           # Scrape the webpage and add to dict
-    save_md_to_file(markdown_dict, problem_id)                                  # Save problem MD in problem folder
+    from_problem, to_problem = 1, 5                                             # Range of problems to scrape
+    for p in range(from_problem, to_problem+1):
+        scrape(markdown_dict, p)                                                # Scrape the webpage and add to dict
+        save_md_to_file(markdown_dict, p)                                       # Save problem MD in problem folder
 
 def scrape(markdown_dict, problem_id):
     url = 'https://projecteuler.net/problem={}'.format(problem_id)              # URL to scrape
