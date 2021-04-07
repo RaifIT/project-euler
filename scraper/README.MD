@@ -1,5 +1,5 @@
-# Largest prime factor
-## Problem 3
+# Project Euler Scraper
+## BeautifulSoup Scraper for Project Euler
 
-The prime factors of 13195 are 5, 7, 13 and 29.
-What is the largest prime factor of the number 600851475143 ?
+This script allows you to provide a problem number and have it scrape the page for that problem.
+After that, it will summarise the contents of the problem in a dictionary and write a MD with the details.

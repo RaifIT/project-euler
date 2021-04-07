@@ -24,7 +24,6 @@ def save_md_to_file(markdown_dict, problem_id):
 
 
 def filter_soup(soup, markdown_dict, problem_id):
-    # Filtering
     content = soup.find('div', id="content")                                    # Isolate the problem details
     title = content.find('h2').text                                             # Problem title
     subtitle = content.find('h3').text                                          # Problem subtitle (i.e. Problem 2)
