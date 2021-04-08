@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 def run():
     markdown_dict = {}                                                          # Markdown Dictionary
-    from_problem, to_problem = 1, 5                                             # Range of problems to scrape
+    from_problem, to_problem = 1, 6                                             # Range of problems to scrape
     for p in range(from_problem, to_problem+1):
         scrape(markdown_dict, p)                                                # Scrape the webpage and add to dict
         save_md_to_file(markdown_dict, p)                                       # Save problem MD in problem folder
